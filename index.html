@@ -73,7 +73,11 @@ h1{font-size:clamp(30px,5vw,54px);line-height:1.08;font-weight:800;margin:0 auto
 .authors a{color:var(--text);border-bottom:1.5px solid color-mix(in srgb,var(--accent) 45%,transparent)}
 .authors a:hover{text-decoration:none;border-bottom-color:var(--accent)}
 .authors sup{font-size:11px;color:var(--faint);margin-left:1px}
-.affil{color:var(--muted);font-size:15px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 24px}
+.affil{display:flex;justify-content:center;margin:14px 0 2px}
+.org{display:inline-flex;align-items:center;gap:10px;padding:8px 18px 8px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);font:700 16px "Plus Jakarta Sans",Inter,sans-serif;color:var(--text);letter-spacing:-.01em}
+.org .mark{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff}
+.org .mark svg{width:15px;height:15px}
+.org sup{font-size:11px;color:var(--faint);font-weight:500}
 .note{color:var(--faint);font-size:12.5px;margin-top:6px}
 .links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:12px;background:var(--text);color:var(--bg);font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s}
@@ -188,13 +192,12 @@ footer{padding:36px 0 52px;color:var(--faint);font-size:13px;text-align:center}
     <p class="sub">A Query-Wise 3D Segmenter for Gaussian Splatting</p>
 
     <div class="authors">
-      <span><a href="https://frankielp.github.io">Nhat-Quynh Le-Pham</a><sup>1,2*</sup></span>
-      <span><a href="https://www.khoinguyen.org/">Khoi Nguyen</a><sup>2</sup></span>
-      <span><a href="https://sonhua.github.io/">Binh-Son Hua</a><sup>1</sup></span>
+      <span><a href="https://frankielp.github.io">Nhat-Quynh Le-Pham</a><sup>*</sup></span>
+      <span><a href="https://www.khoinguyen.org/">Khoi Nguyen</a></span>
+      <span><a href="https://sonhua.github.io/">Binh-Son Hua</a></span>
     </div>
     <div class="affil">
-      <span><sup>1</sup>Trinity College Dublin</span>
-      <span><sup>2</sup>Qualcomm AI Research<sup>†</sup></span>
+      <span class="org"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>Qualcomm AI Research<sup>†</sup></span>
     </div>
     <div class="note">*Work done while at Qualcomm. &nbsp;†Qualcomm AI Research is an initiative of Qualcomm Technologies, Inc.</div>
 
@@ -464,7 +467,7 @@ footer{padding:36px 0 52px;color:var(--faint);font-size:13px;text-align:center}
 </section>
 
 <footer>
-  <div class="wrap">© 2027 the authors · Trinity College Dublin · Qualcomm AI Research</div>
+  <div class="wrap">© 2027 the authors · Qualcomm AI Research</div>
 </footer>
 
 <script>
