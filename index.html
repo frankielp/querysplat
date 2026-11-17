@@ -360,20 +360,6 @@ footer{padding:36px 0 52px;color:var(--faint);font-size:13px;text-align:center}
             </tbody>
           </table>
         </div>
-        <div class="tcard">
-          <h3>Full-scene extension</h3>
-          <p class="hint">ScanNet semantic segmentation, 19 classes</p>
-          <table>
-            <thead><tr><th>Method</th><th>mIoU ↑</th><th>mAcc ↑</th></tr></thead>
-            <tbody>
-              <tr><td>OpenGaussian</td><td>24.7</td><td>41.5</td></tr>
-              <tr><td>VALA</td><td>32.1</td><td>50.0</td></tr>
-              <tr><td>LUDVIG</td><td>33.9</td><td>51.4</td></tr>
-              <tr class="ours"><td>Ours</td><td>38.9</td><td>62.3</td></tr>
-            </tbody>
-          </table>
-          <p class="tnote">Also the best AP (22.2) for class-agnostic 3D instance segmentation on ScanNet++.</p>
-        </div>
       </div>
     </div>
 
@@ -417,32 +403,13 @@ footer{padding:36px 0 52px;color:var(--faint);font-size:13px;text-align:center}
     <p class="lead">Clean instance boundaries across object-centric, forward-facing and cluttered indoor scenes.</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-t="q-lerf">LERF-OVS</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="q-ramen">Ramen</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="q-figurines">Figurines</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="q-teatime">Teatime</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="q-waldo">Waldo kitchen</button>
       <button class="tab" role="tab" aria-selected="false" data-t="q-3dovs">3D-OVS</button>
       <button class="tab" role="tab" aria-selected="false" data-t="q-scannet">ScanNet</button>
     </div>
     <div class="panel" id="q-lerf"><figure><img loading="lazy" src="static/images/6-lerf_ovs.jpg" alt="Qualitative comparison on LERF-OVS"><figcaption>Comparison with prior methods on LERF-OVS.</figcaption></figure></div>
-    <div class="panel" id="q-ramen" hidden><figure><img loading="lazy" src="static/images/X-lerf-ovs-ramen.jpg" alt="LERF-OVS ramen scene results"><figcaption>LERF-OVS · ramen.</figcaption></figure></div>
-    <div class="panel" id="q-figurines" hidden><figure><img loading="lazy" src="static/images/X-lerf-ovs-figurines.jpg" alt="LERF-OVS figurines scene results"><figcaption>LERF-OVS · figurines.</figcaption></figure></div>
-    <div class="panel" id="q-teatime" hidden><figure><img loading="lazy" src="static/images/X-lerf-ovs-teatime.jpg" alt="LERF-OVS teatime scene results"><figcaption>LERF-OVS · teatime.</figcaption></figure></div>
-    <div class="panel" id="q-waldo" hidden><figure><img loading="lazy" src="static/images/X-lerf-ovs-waldo.jpg" alt="LERF-OVS waldo kitchen scene results"><figcaption>LERF-OVS · waldo kitchen.</figcaption></figure></div>
     <div class="panel" id="q-3dovs" hidden><figure><img loading="lazy" src="static/images/7-3d-ovs.jpg" alt="Qualitative results on 3D-OVS"><figcaption>3D-OVS.</figcaption></figure>
       <figure><img loading="lazy" src="static/images/X-3d-ovs.jpg" alt="More 3D-OVS results"><figcaption>Additional 3D-OVS scenes.</figcaption></figure></div>
     <div class="panel" id="q-scannet" hidden><figure><img loading="lazy" src="static/images/X-scannet.jpg" alt="Qualitative results on ScanNet"><figcaption>Open-vocabulary segmentation in cluttered ScanNet scenes.</figcaption></figure></div>
-
-    <div class="two" style="margin-top:28px">
-      <figure>
-        <img loading="lazy" src="static/images/5-multi-instance.jpg" alt="Multi-instance pivot regions">
-        <figcaption><b>Multi-instance queries.</b> Instances are extracted one by one; after each, pixels covered by its Gaussians are suppressed so the next pivot lands on a new instance.</figcaption>
-      </figure>
-      <figure>
-        <img loading="lazy" src="static/images/fullscene-pipeline.jpg" alt="Full-scene extension pipeline">
-        <figcaption><b>Full-scene extension.</b> Class-agnostic 3D proposals each take their averaged tracklet feature, turning the query-wise segmenter into a full-scene one without training.</figcaption>
-      </figure>
-    </div>
   </div>
 </section>
 
